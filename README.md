@@ -1,73 +1,94 @@
+# Proyecto: ScoreShareHub API
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Descripción
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+ScoreShareHub es un repositorio inicial de TypeScript para el framework [Nest](https://github.com/nestjs/nest).
 
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
+## Instalación
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+## Ejecutar la aplicación
 
 ```bash
-# development
+# modo desarrollo
 $ npm run start
 
-# watch mode
+# modo observador
 $ npm run start:dev
 
-# production mode
+# modo producción
 $ npm run start:prod
 ```
 
-## Test
+## Pruebas
 
 ```bash
-# unit tests
+# pruebas unitarias
 $ npm run test
 
-# e2e tests
+# pruebas e2e
 $ npm run test:e2e
 
-# test coverage
+# cobertura de pruebas
 $ npm run test:cov
 ```
 
-## Support
+## Convenciones de Commits
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Utiliza la siguiente nomenclatura en tus commits:
 
-## Stay in touch
+- **feat:** Implementa nueva funcionalidad.
+- **fix:** Resuelve problemas o errores.
+- **chore:** Tareas de mantenimiento y mejoras en el proceso de desarrollo.
+- **docs:** Actualizaciones o adiciones a la documentación.
+- **style:** Cambios que no afectan el significado del código (formato, punto y coma, etc.).
+- **refactor:** Cambios en el código que no arreglan errores ni añaden nuevas características.
+- **test:** Añade o mejora pruebas.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
+Ejemplos:
+
+- "feat: implementar nuevo endpoint de usuarios"
+- "fix: resolver problemas con la autenticación"
+
+## Funcionalidades y Reglas
+
+### Autenticación de Usuarios
+
+La API debe gestionar la autenticación de usuarios, incluyendo registro, inicio de sesión y recuperación de contraseñas.
+
+### Subida de Partituras
+
+- Cada usuario registrado puede subir partituras.
+- La información asociada a las partituras debe incluir el autor, la fecha, los instrumentos, el nombre de la partitura y la dificultad.
+- Se utilizará la API de GitHub como almacenamiento de archivos.
+
+### Visualización y Descarga de Partituras
+
+- Los usuarios pueden ver todas las partituras subidas, buscarlas y descargarlas.
+- Filtrado por categorías como música clásica, anime, fantasía, videojuegos, rock, pop, etc.
+
+### Reportes y Denuncias
+
+- Los usuarios pueden reportar o denunciar partituras.
+- Si una partitura recibe un cierto número de reportes, se debe considerar su eliminación o bloqueo de acceso.
+
+## Soporte
+
+ScoreShareHub es un proyecto de código abierto con licencia MIT. Puede crecer gracias a los patrocinadores y el respaldo de personas increíbles. Si deseas unirte a ellos, [lee más aquí](https://docs.nestjs.com/support).
+
+## Mantente en contacto
+
+- Autor - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Sitio web - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
 
-## License
+## Licencia
 
-Nest is [MIT licensed](LICENSE).
+ScoreShareHub tiene licencia [MIT](LICENSE).
